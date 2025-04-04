@@ -3,9 +3,8 @@ import numpy as np
 import gudhi as gd
 import matplotlib.pyplot as plt
 
-# --------------------------
+
 # Step 1: Load CSV (spatial data)
-# --------------------------
 df = pd.read_csv('Skyserver_SQL3_16_2025 8_52_53 PM.csv', dtype=str)
 df.columns = df.columns.str.strip()
 df = df.apply(pd.to_numeric, errors='coerce')
@@ -15,9 +14,7 @@ df = df.sample(n=10000, random_state=42).reset_index(drop=True)
 # Extract spatial coordinates (for Rips complex)
 spatial_points = df[['ra', 'dec', 'redshift']].values
 
-# --------------------------
 # Step 2: Load precomputed filtration values from rivet_input.txt
-# --------------------------
 rivet_file = 'rivet_input.txt'
 with open(rivet_file, 'r') as f:
     lines = f.readlines()
@@ -49,9 +46,7 @@ if filtration_data.shape[0] != len(spatial_points):
 extinction_vals = filtration_data[:, 0]
 nn_vals = filtration_data[:, 1]
 
-# --------------------------
 # Step 3: Define parameter grid
-# --------------------------
 ext_min, ext_max = np.min(extinction_vals), np.max(extinction_vals)
 num_ext = 10
 ext_thresholds = np.linspace(ext_min, ext_max, num_ext)
@@ -68,9 +63,7 @@ betti0_heatmap = np.zeros((num_ext, num_nn))
 betti1_heatmap = np.zeros((num_ext, num_nn))
 betti2_heatmap = np.zeros((num_ext, num_nn))
 
-# --------------------------
 # Step 4: Build Rips complexes, compute persistence, store Betti-k
-# --------------------------
 for i, ext_thresh in enumerate(ext_thresholds):
     for j, nn_thresh in enumerate(nn_thresholds):
         # Filter points whose filtration values are <= current thresholds
@@ -104,9 +97,8 @@ for i, ext_thresh in enumerate(ext_thresholds):
             betti1_heatmap[i, j] = np.nan
             betti2_heatmap[i, j] = np.nan
 
-# --------------------------
 # Step 5: Plot subplots for Betti-0, Betti-1, Betti-2
-# --------------------------
+
 fig, axes = plt.subplots(1, 3, figsize=(16, 5))
 
 heatmaps = [betti0_heatmap, betti1_heatmap, betti2_heatmap]
