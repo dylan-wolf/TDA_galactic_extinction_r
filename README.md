@@ -46,7 +46,7 @@ python tda_spatial_gudhi.py          # 1-parameter analysis
 python tda_bifilter_points_generator.py
 python bifiltration_analysis.py      # 2-parameter Betti heat-maps
 
-
+```
 ---
 
 ## 🖼 Sneak peek
