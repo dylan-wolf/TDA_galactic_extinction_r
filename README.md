@@ -17,11 +17,14 @@
 
 | Path | Purpose |
 |------|---------|
-| `data/` | Example CSV slice of SDSS. |
-| `variation_heat_map.py` | Quick EDA – scatter, hexbin, histograms of **extinction_r**.|
-| `tda_spatial_gudhi.py` | Vietoris–Rips, persistence diagrams/barcodes on **[RA,Dec,z]**. |
-| `tda_bifilter_points_generator.py` | Builds bifiltration input grid (extinction + NN-distance). |
-| `bifiltration_analysis.py` | Runs 2-D persistence, spits out β₀/β₁/β₂ heat-maps. |
+| `assets/SDSS` | Example SQL queries and outputs to SDSS. |
+|`assets/images` | Example outputs of the program. |
+|`code/image_generator` | Generates example simplicial complex images used in paper. |
+| `code/initial_review/variation_heat_map.py` | Quick EDA – scatter, hexbin, histograms of **extinction_r**.|
+| `code/initial_review/tda_spatial_gudhi.py` | Vietoris–Rips, persistence diagrams/barcodes on **[RA,Dec,z]**. |
+| `code/mutlidimensional/tda_bifilter_points_generator.py` | Builds bifiltration input grid (extinction + NN-distance). |
+| `code/multidimensional/bifiltration_analysis.py` | Runs 2-D persistence, spits out β₀/β₁/β₂ heat-maps. |
+| `code/output_data` | Example output data of `tda_bifiltration_points_generator.py`. |
 | `paper/` | Draft PDF of the companion research article. |
 
 ---
