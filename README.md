@@ -17,8 +17,8 @@
 
 | Path | Purpose |
 |------|---------|
-| `data/` | Example 10 k-row CSV slice of SDSS (or drop your own). |
-| `variation_heat_map.py` | Quick EDA – scatter, hexbin, histograms of **extinction_r**. :contentReference[oaicite:2]{index=2}&#8203;:contentReference[oaicite:3]{index=3}|
+| `data/` | Example CSV slice of SDSS. |
+| `variation_heat_map.py` | Quick EDA – scatter, hexbin, histograms of **extinction_r**.|
 | `tda_spatial_gudhi.py` | Vietoris–Rips, persistence diagrams/barcodes on **[RA,Dec,z]**. |
 | `tda_bifilter_points_generator.py` | Builds bifiltration input grid (extinction + NN-distance). |
 | `bifiltration_analysis.py` | Runs 2-D persistence, spits out β₀/β₁/β₂ heat-maps. |
@@ -35,7 +35,7 @@ cd TDA_galactic_extinction_r
 python -m venv .venv && source .venv/bin/activate
 
 # 2. Install requirements
-pip install -r requirements.txt      # pandas, numpy, matplotlib, gudhi, seaborn …
+pip install -r requirements.txt   
 
 # 3. Drop your SDSS CSV in ./data   (or use the included sample)
 # 4. Run a first look
@@ -46,7 +46,6 @@ python tda_spatial_gudhi.py          # 1-parameter analysis
 python tda_bifilter_points_generator.py
 python bifiltration_analysis.py      # 2-parameter Betti heat-maps
 
-Results (PNGs) land in `output/`—feel free to drop them into the repo’s **Screenshots** section or your next talk.
 
 ---
 
@@ -54,7 +53,7 @@ Results (PNGs) land in `output/`—feel free to drop them into the repo’s **Sc
 
 ![β₀/β₁ heat-map teaser](docs/figures/betti_heatmap_teaser.png)
 
-> Clusters merge rapidly with increasing spatial radius while β₁ loops bloom at intermediate extinction thresholds—hinting at ring-like dust structures in the surveyed sky. citeturn0file0
+> Clusters merge rapidly with increasing spatial radius while β₁ loops bloom at intermediate extinction thresholds—hinting at ring-like dust structures in the surveyed sky.
 
 ---
 
