@@ -51,7 +51,7 @@ python bifiltration_analysis.py      # 2-parameter Betti heat-maps
 
 ## 🖼 Sneak peek
 
-![β₀/β₁ heat-map teaser](docs/figures/betti_heatmap_teaser.png)
+![β₀/β₁ heat-map teaser](/assets/images/bifiltration_output/first_Betti-heatmap.png)
 
 > Clusters merge rapidly with increasing spatial radius while β₁ loops bloom at intermediate extinction thresholds—hinting at ring-like dust structures in the surveyed sky.
 
