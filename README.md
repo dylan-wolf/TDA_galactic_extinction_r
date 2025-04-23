@@ -8,7 +8,7 @@
 ## ✨ What’s inside
 * **4-D point cloud** `(RA, Dec, redshift, extinction_r)` sampled from SDSS.
 * **Single-parameter TDA** with Gudhi to explore the raw 3-D spatial structure.
-* **Custom 2-parameter bifiltration** (`extinction` × `nearest-neighbor distance`) with home-built heat-map visualisations that expose clusters (β₀) and loops (β₁). :contentReference[oaicite:0]{index=0}&#8203;:contentReference[oaicite:1]{index=1}
+* **Custom 2-parameter bifiltration** (`extinction` × `nearest-neighbor distance`) with home-built heat-map visualisations that expose clusters (β₀) and loops (β₁). 
 * Lightweight, reproducible Python scripts & Jupyter notebooks—no heavyweight workflow managers required.
 
 ---
