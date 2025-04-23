@@ -60,7 +60,7 @@ python bifiltration_analysis.py      # 2-parameter Betti heat-maps
 
 If you use this code, please cite:
 
-```
+```latex
 @unpublished{Wolf2025,
   author    = {Dylan Wolf},
   title     = {Using Topological Data Analysis to Analyze Galactic Extinction Rates},
