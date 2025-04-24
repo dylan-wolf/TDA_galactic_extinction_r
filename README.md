@@ -1,8 +1,6 @@
 # 🌌 **TDA Galactic Extinction _r_** &nbsp;![Python](https://img.shields.io/badge/python-3.10+-blue) ![License](https://img.shields.io/github/license/dylan-wolf/TDA_galactic_extinction_r)
 
 > **Multidimensional persistent homology meets interstellar dust.**  
-> Dive into the code that turns Sloan Digital Sky Survey data into beautiful Betti-number heat-maps and fresh insights about how dust shapes our view of the Milky Way.  
-
 ---
 
 ## ✨ What’s inside
