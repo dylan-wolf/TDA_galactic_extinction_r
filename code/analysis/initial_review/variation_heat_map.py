@@ -9,11 +9,10 @@ df.columns = df.columns.str.strip()
 df = df.apply(pd.to_numeric, errors='coerce')
 df.dropna(subset=['ra', 'dec', 'redshift', 'extinction_r'], inplace=True)
 
-# Strip column names again (in case)
+# Strip column names again 
 df.columns = df.columns.str.strip()
 
-### -----------------------------------------
-### 1. Log-normalized scatter plot (better contrast)
+### 1. Log-normalized scatter plot 
 plt.figure(figsize=(10, 6))
 norm = mcolors.LogNorm(vmin=df['extinction_r'].min(), vmax=df['extinction_r'].max())
 sc = plt.scatter(df['ra'], df['dec'], c=df['extinction_r'], cmap='inferno', norm=norm, s=10, alpha=0.6)
@@ -26,7 +25,6 @@ plt.tight_layout()
 plt.savefig('Log-Scaled_Spatial_Variation.png')
 plt.show()
 
-### -----------------------------------------
 ### 2. Hexbin plot (shows spatial density + extinction variation)
 plt.figure(figsize=(10, 6))
 hb = plt.hexbin(df['ra'], df['dec'], C=df['extinction_r'], reduce_C_function=np.mean,
@@ -40,7 +38,6 @@ plt.tight_layout()
 plt.savefig('Hexbin_Plot.png')
 plt.show()
 
-### -----------------------------------------
 ### 3. Histogram of extinction_r distribution
 plt.figure(figsize=(8, 5))
 plt.hist(df['extinction_r'], bins=50, color='gray', edgecolor='black')
@@ -52,7 +49,6 @@ plt.tight_layout()
 plt.savefig("Distribution_of_Extinction_r.png")
 plt.show()
 
-### -----------------------------------------
 ### 4. Breaking down extinction and showing median redshift
 
 
