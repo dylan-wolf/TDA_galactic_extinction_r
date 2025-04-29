@@ -1,4 +1,4 @@
-# 🌌 **TDA Galactic Extinction _r_** &nbsp;![Python](https://img.shields.io/badge/python-3.10+-blue) ![License](https://img.shields.io/github/license/dylan-wolf/TDA_galactic_extinction_r)
+# 🌌 **TDA Galactic Extinction Rate Investigation** &nbsp;![Python](https://img.shields.io/badge/python-3.10+-blue) ![License](https://img.shields.io/github/license/dylan-wolf/TDA_galactic_extinction_r)
 
 > **Multidimensional persistent homology meets interstellar dust.**  
 ---
