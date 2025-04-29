@@ -55,7 +55,7 @@ nn_min, nn_max = np.min(nn_vals), np.max(nn_vals)
 num_nn = 10
 nn_thresholds = np.linspace(nn_min, nn_max, num_nn)
 
-# We'll compute up to dimension=2
+# We compute up to dimension=2
 max_dim = 2
 
 # Initialize arrays: betti0, betti1, betti2
