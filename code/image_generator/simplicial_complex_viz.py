@@ -17,7 +17,6 @@ points = np.vstack((x, y)).T
 epsilon = 0.35
 tol = 1e-8  # tolerance to overcome floating point inaccuracies
 
-# --------------------------
 # 1. Plot the raw point cloud
 plt.figure(figsize=(4, 4))
 plt.scatter(points[:, 0], points[:, 1], color='black')
@@ -27,7 +26,6 @@ plt.axis('off')
 plt.savefig("figure1_non_circle.png", bbox_inches='tight')
 plt.close()
 
-# --------------------------
 # 2. Plot the point cloud with circles of radius ε around each point
 plt.figure(figsize=(4, 4))
 plt.scatter(points[:, 0], points[:, 1], color='black')
@@ -40,7 +38,6 @@ plt.axis('off')
 plt.savefig("figure2.png", bbox_inches='tight')
 plt.close()
 
-# --------------------------
 # 3. Build and plot the Vietoris–Rips Complex using the tolerance.
 # Compute pairwise distances.
 dist_matrix = distance_matrix(points, points)
