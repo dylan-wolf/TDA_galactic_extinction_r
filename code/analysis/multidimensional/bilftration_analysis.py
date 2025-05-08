@@ -25,7 +25,7 @@ if len(lines) < 3:
 
 # Second line typically: "N M"
 n_points_line = lines[1].strip()
-n_points = int(n_points_line.split()[0])  # not always needed, but let's parse it
+n_points = int(n_points_line.split()[0])  # not always needed
 
 # Read the lines with extinction and nearest-neighbor data
 filtration_data = []
