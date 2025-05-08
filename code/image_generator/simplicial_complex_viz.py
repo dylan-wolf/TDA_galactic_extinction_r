@@ -61,7 +61,7 @@ plt.figure(figsize=(4, 4))
 pos = {i: (points[i][0], points[i][1]) for i in range(n_points)}
 nx.draw(G, pos, node_color='black', node_size=30, edge_color='black', with_labels=False)
 
-# Draw triangles (if found) with filled color.
+#  Fill with color.
 for tri in triangles:
     pts = [points[i] for i in tri]
     polygon = plt.Polygon(pts, closed=True, color='brown', alpha=0.5)
