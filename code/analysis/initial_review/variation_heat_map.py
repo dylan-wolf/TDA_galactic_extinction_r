@@ -70,10 +70,3 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig("Median_Redshift.png")
 plt.show()
-
-
-'''
-For most extinction values (<0.18), the median redshift stays relatively flat, around ~0.10–0.11. This is expected — foreground dust isn't tied to distance.
-But then at higher extinction_r values (>0.18), the median redshift unexpectedly jumps up, peaking around 0.15 — before dropping again.
-THis is due to not having any high extinction_r values.
-'''
